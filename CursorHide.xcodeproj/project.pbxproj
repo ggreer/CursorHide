@@ -1,0 +1,479 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E2FAF9DE18A6D5EC006560EB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2FAF9DD18A6D5EC006560EB /* Cocoa.framework */; };
+		E2FAF9E818A6D5EC006560EB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E2FAF9E618A6D5EC006560EB /* InfoPlist.strings */; };
+		E2FAF9EA18A6D5EC006560EB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E2FAF9E918A6D5EC006560EB /* main.m */; };
+		E2FAF9EE18A6D5EC006560EB /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = E2FAF9EC18A6D5EC006560EB /* Credits.rtf */; };
+		E2FAF9F118A6D5EC006560EB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E2FAF9F018A6D5EC006560EB /* AppDelegate.m */; };
+		E2FAF9F418A6D5EC006560EB /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2FAF9F218A6D5EC006560EB /* MainMenu.xib */; };
+		E2FAF9F618A6D5EC006560EB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2FAF9F518A6D5EC006560EB /* Images.xcassets */; };
+		E2FAF9FD18A6D5EC006560EB /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2FAF9FC18A6D5EC006560EB /* XCTest.framework */; };
+		E2FAF9FE18A6D5EC006560EB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2FAF9DD18A6D5EC006560EB /* Cocoa.framework */; };
+		E2FAFA0618A6D5EC006560EB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E2FAFA0418A6D5EC006560EB /* InfoPlist.strings */; };
+		E2FAFA0818A6D5EC006560EB /* CursorHideTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E2FAFA0718A6D5EC006560EB /* CursorHideTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E2FAF9FF18A6D5EC006560EB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E2FAF9D218A6D5EC006560EB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E2FAF9D918A6D5EC006560EB;
+			remoteInfo = CursorHide;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E2FAF9DA18A6D5EC006560EB /* CursorHide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CursorHide.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2FAF9DD18A6D5EC006560EB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		E2FAF9E018A6D5EC006560EB /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		E2FAF9E118A6D5EC006560EB /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		E2FAF9E218A6D5EC006560EB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E2FAF9E518A6D5EC006560EB /* CursorHide-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CursorHide-Info.plist"; sourceTree = "<group>"; };
+		E2FAF9E718A6D5EC006560EB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E2FAF9E918A6D5EC006560EB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E2FAF9EB18A6D5EC006560EB /* CursorHide-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CursorHide-Prefix.pch"; sourceTree = "<group>"; };
+		E2FAF9ED18A6D5EC006560EB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		E2FAF9EF18A6D5EC006560EB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E2FAF9F018A6D5EC006560EB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E2FAF9F318A6D5EC006560EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		E2FAF9F518A6D5EC006560EB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		E2FAF9FB18A6D5EC006560EB /* CursorHideTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CursorHideTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2FAF9FC18A6D5EC006560EB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		E2FAFA0318A6D5EC006560EB /* CursorHideTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CursorHideTests-Info.plist"; sourceTree = "<group>"; };
+		E2FAFA0518A6D5EC006560EB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E2FAFA0718A6D5EC006560EB /* CursorHideTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CursorHideTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E2FAF9D718A6D5EC006560EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2FAF9DE18A6D5EC006560EB /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2FAF9F818A6D5EC006560EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2FAF9FE18A6D5EC006560EB /* Cocoa.framework in Frameworks */,
+				E2FAF9FD18A6D5EC006560EB /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E2FAF9D118A6D5EC006560EB = {
+			isa = PBXGroup;
+			children = (
+				E2FAF9E318A6D5EC006560EB /* CursorHide */,
+				E2FAFA0118A6D5EC006560EB /* CursorHideTests */,
+				E2FAF9DC18A6D5EC006560EB /* Frameworks */,
+				E2FAF9DB18A6D5EC006560EB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E2FAF9DB18A6D5EC006560EB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E2FAF9DA18A6D5EC006560EB /* CursorHide.app */,
+				E2FAF9FB18A6D5EC006560EB /* CursorHideTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E2FAF9DC18A6D5EC006560EB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E2FAF9DD18A6D5EC006560EB /* Cocoa.framework */,
+				E2FAF9FC18A6D5EC006560EB /* XCTest.framework */,
+				E2FAF9DF18A6D5EC006560EB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E2FAF9DF18A6D5EC006560EB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E2FAF9E018A6D5EC006560EB /* AppKit.framework */,
+				E2FAF9E118A6D5EC006560EB /* CoreData.framework */,
+				E2FAF9E218A6D5EC006560EB /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		E2FAF9E318A6D5EC006560EB /* CursorHide */ = {
+			isa = PBXGroup;
+			children = (
+				E2FAF9EF18A6D5EC006560EB /* AppDelegate.h */,
+				E2FAF9F018A6D5EC006560EB /* AppDelegate.m */,
+				E2FAF9F218A6D5EC006560EB /* MainMenu.xib */,
+				E2FAF9F518A6D5EC006560EB /* Images.xcassets */,
+				E2FAF9E418A6D5EC006560EB /* Supporting Files */,
+			);
+			path = CursorHide;
+			sourceTree = "<group>";
+		};
+		E2FAF9E418A6D5EC006560EB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E2FAF9E518A6D5EC006560EB /* CursorHide-Info.plist */,
+				E2FAF9E618A6D5EC006560EB /* InfoPlist.strings */,
+				E2FAF9E918A6D5EC006560EB /* main.m */,
+				E2FAF9EB18A6D5EC006560EB /* CursorHide-Prefix.pch */,
+				E2FAF9EC18A6D5EC006560EB /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E2FAFA0118A6D5EC006560EB /* CursorHideTests */ = {
+			isa = PBXGroup;
+			children = (
+				E2FAFA0718A6D5EC006560EB /* CursorHideTests.m */,
+				E2FAFA0218A6D5EC006560EB /* Supporting Files */,
+			);
+			path = CursorHideTests;
+			sourceTree = "<group>";
+		};
+		E2FAFA0218A6D5EC006560EB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E2FAFA0318A6D5EC006560EB /* CursorHideTests-Info.plist */,
+				E2FAFA0418A6D5EC006560EB /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E2FAF9D918A6D5EC006560EB /* CursorHide */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2FAFA0B18A6D5EC006560EB /* Build configuration list for PBXNativeTarget "CursorHide" */;
+			buildPhases = (
+				E2FAF9D618A6D5EC006560EB /* Sources */,
+				E2FAF9D718A6D5EC006560EB /* Frameworks */,
+				E2FAF9D818A6D5EC006560EB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CursorHide;
+			productName = CursorHide;
+			productReference = E2FAF9DA18A6D5EC006560EB /* CursorHide.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E2FAF9FA18A6D5EC006560EB /* CursorHideTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2FAFA0E18A6D5EC006560EB /* Build configuration list for PBXNativeTarget "CursorHideTests" */;
+			buildPhases = (
+				E2FAF9F718A6D5EC006560EB /* Sources */,
+				E2FAF9F818A6D5EC006560EB /* Frameworks */,
+				E2FAF9F918A6D5EC006560EB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E2FAFA0018A6D5EC006560EB /* PBXTargetDependency */,
+			);
+			name = CursorHideTests;
+			productName = CursorHideTests;
+			productReference = E2FAF9FB18A6D5EC006560EB /* CursorHideTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E2FAF9D218A6D5EC006560EB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Geoff Greer";
+				TargetAttributes = {
+					E2FAF9FA18A6D5EC006560EB = {
+						TestTargetID = E2FAF9D918A6D5EC006560EB;
+					};
+				};
+			};
+			buildConfigurationList = E2FAF9D518A6D5EC006560EB /* Build configuration list for PBXProject "CursorHide" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E2FAF9D118A6D5EC006560EB;
+			productRefGroup = E2FAF9DB18A6D5EC006560EB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E2FAF9D918A6D5EC006560EB /* CursorHide */,
+				E2FAF9FA18A6D5EC006560EB /* CursorHideTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E2FAF9D818A6D5EC006560EB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2FAF9E818A6D5EC006560EB /* InfoPlist.strings in Resources */,
+				E2FAF9F618A6D5EC006560EB /* Images.xcassets in Resources */,
+				E2FAF9EE18A6D5EC006560EB /* Credits.rtf in Resources */,
+				E2FAF9F418A6D5EC006560EB /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2FAF9F918A6D5EC006560EB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2FAFA0618A6D5EC006560EB /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E2FAF9D618A6D5EC006560EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2FAF9F118A6D5EC006560EB /* AppDelegate.m in Sources */,
+				E2FAF9EA18A6D5EC006560EB /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2FAF9F718A6D5EC006560EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2FAFA0818A6D5EC006560EB /* CursorHideTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E2FAFA0018A6D5EC006560EB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E2FAF9D918A6D5EC006560EB /* CursorHide */;
+			targetProxy = E2FAF9FF18A6D5EC006560EB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E2FAF9E618A6D5EC006560EB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E2FAF9E718A6D5EC006560EB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		E2FAF9EC18A6D5EC006560EB /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E2FAF9ED18A6D5EC006560EB /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		E2FAF9F218A6D5EC006560EB /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E2FAF9F318A6D5EC006560EB /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		E2FAFA0418A6D5EC006560EB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E2FAFA0518A6D5EC006560EB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E2FAFA0918A6D5EC006560EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		E2FAFA0A18A6D5EC006560EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		E2FAFA0C18A6D5EC006560EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CursorHide/CursorHide-Prefix.pch";
+				INFOPLIST_FILE = "CursorHide/CursorHide-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E2FAFA0D18A6D5EC006560EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CursorHide/CursorHide-Prefix.pch";
+				INFOPLIST_FILE = "CursorHide/CursorHide-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		E2FAFA0F18A6D5EC006560EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CursorHide.app/Contents/MacOS/CursorHide";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CursorHide/CursorHide-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "CursorHideTests/CursorHideTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		E2FAFA1018A6D5EC006560EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CursorHide.app/Contents/MacOS/CursorHide";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CursorHide/CursorHide-Prefix.pch";
+				INFOPLIST_FILE = "CursorHideTests/CursorHideTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E2FAF9D518A6D5EC006560EB /* Build configuration list for PBXProject "CursorHide" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2FAFA0918A6D5EC006560EB /* Debug */,
+				E2FAFA0A18A6D5EC006560EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E2FAFA0B18A6D5EC006560EB /* Build configuration list for PBXNativeTarget "CursorHide" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2FAFA0C18A6D5EC006560EB /* Debug */,
+				E2FAFA0D18A6D5EC006560EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E2FAFA0E18A6D5EC006560EB /* Build configuration list for PBXNativeTarget "CursorHideTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2FAFA0F18A6D5EC006560EB /* Debug */,
+				E2FAFA1018A6D5EC006560EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E2FAF9D218A6D5EC006560EB /* Project object */;
+}
