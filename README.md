@@ -1,4 +1,7 @@
-CursorHide
-==========
+# CursorHide
 
-Utility to hide mouse cursor on OS X if it hasn't been moved in a little while.
+---
+
+### Development status: proof of concept. No UI yet.
+
+OS X utility to hide the mouse cursor if it hasn't been moved recently.
