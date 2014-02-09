@@ -18,6 +18,8 @@
 		E2FAF9FE18A6D5EC006560EB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2FAF9DD18A6D5EC006560EB /* Cocoa.framework */; };
 		E2FAFA0618A6D5EC006560EB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E2FAFA0418A6D5EC006560EB /* InfoPlist.strings */; };
 		E2FAFA0818A6D5EC006560EB /* CursorHideTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E2FAFA0718A6D5EC006560EB /* CursorHideTests.m */; };
+		E2FAFA1218A6D7D1006560EB /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2FAFA1118A6D7D1006560EB /* ApplicationServices.framework */; };
+		E2FAFA1318A7570B006560EB /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2FAF9E018A6D5EC006560EB /* AppKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,7 @@
 		E2FAFA0318A6D5EC006560EB /* CursorHideTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CursorHideTests-Info.plist"; sourceTree = "<group>"; };
 		E2FAFA0518A6D5EC006560EB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E2FAFA0718A6D5EC006560EB /* CursorHideTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CursorHideTests.m; sourceTree = "<group>"; };
+		E2FAFA1118A6D7D1006560EB /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = System/Library/Frameworks/ApplicationServices.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +60,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2FAFA1318A7570B006560EB /* AppKit.framework in Frameworks */,
+				E2FAFA1218A6D7D1006560EB /* ApplicationServices.framework in Frameworks */,
 				E2FAF9DE18A6D5EC006560EB /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -95,6 +100,7 @@
 		E2FAF9DC18A6D5EC006560EB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E2FAFA1118A6D7D1006560EB /* ApplicationServices.framework */,
 				E2FAF9DD18A6D5EC006560EB /* Cocoa.framework */,
 				E2FAF9FC18A6D5EC006560EB /* XCTest.framework */,
 				E2FAF9DF18A6D5EC006560EB /* Other Frameworks */,
@@ -464,6 +470,7 @@
 				E2FAFA0D18A6D5EC006560EB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E2FAFA0E18A6D5EC006560EB /* Build configuration list for PBXNativeTarget "CursorHideTests" */ = {
 			isa = XCConfigurationList;
@@ -472,6 +479,7 @@
 				E2FAFA1018A6D5EC006560EB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
