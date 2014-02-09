@@ -13,47 +13,54 @@
 
 @implementation AppDelegate
 
-NSTimer *timer = nil;
-double timeout = 2.7;
-
 - (void)hideCursor {
-    void CGSSetConnectionProperty(int, int, CFStringRef, CFBooleanRef);
-    int _CGSDefaultConnection();
-    CFStringRef propertyString;
-
-    NSLog(@"Hiding cursor");
-    // Hack to make background cursor setting work
-    propertyString = CFStringCreateWithCString(NULL, "SetsCursorInBackground", kCFStringEncodingUTF8);
-    CGSSetConnectionProperty(_CGSDefaultConnection(), _CGSDefaultConnection(), propertyString, kCFBooleanTrue);
-    CFRelease(propertyString);
     // Hide the cursor and wait
     CGDisplayHideCursor(kCGDirectMainDisplay);
+    [statusItem setTitle: NSLocalizedString(@"Hidden",@"")];
 }
 
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+- (void)startTimer {
+    [timer invalidate];
     timer = [NSTimer scheduledTimerWithTimeInterval:timeout
                                              target:self selector:@selector(hideCursor)
                                            userInfo:nil repeats:NO];
     [timer setTolerance:0.1]; // Save power
+}
 
+- (void)propStringHack {
+    void CGSSetConnectionProperty(int, int, CFStringRef, CFBooleanRef);
+    int _CGSDefaultConnection();
+    CFStringRef propertyString;
+    // Hack to make background cursor setting work
+    propertyString = CFStringCreateWithCString(NULL, "SetsCursorInBackground", kCFStringEncodingUTF8);
+    CGSSetConnectionProperty(_CGSDefaultConnection(), _CGSDefaultConnection(), propertyString, kCFBooleanTrue);
+    CFRelease(propertyString);
+}
+
+- (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     NSStatusBar *bar = [NSStatusBar systemStatusBar];
-    
-    NSStatusItem *theItem = [bar statusItemWithLength:NSVariableStatusItemLength];
-    
-    [theItem setTitle: NSLocalizedString(@"Tablet",@"")];
-    [theItem setHighlightMode:YES];
-//    [theItem setMenu:_menu];
+    statusItem = [bar statusItemWithLength:NSVariableStatusItemLength];
+    [statusItem setTitle: NSLocalizedString(@"Cursor",@"")];
+    [statusItem setHighlightMode:YES];
+    [statusItem setMenu:_statusMenu];
 
-    [NSEvent addGlobalMonitorForEventsMatchingMask:NSMouseMovedMask handler:^(NSEvent *event) {
+    // TODO: load/save timeout from user preference
+    timeout = 2.7;
+    [self startTimer];
+
+    [self propStringHack];
+
+    NSUInteger resetTimerMask = NSMouseMovedMask | NSLeftMouseDownMask | NSRightMouseDownMask;
+    // TODO: really really inefficient. maybe there's an event that doesn't fire every time the mouse moves a pixel
+    [NSEvent addGlobalMonitorForEventsMatchingMask:resetTimerMask handler:^(NSEvent *event) {
         //setAcceptsMouseMovedEvents
-        if ([timer isValid]) {
-            [timer invalidate];
+        // Instead of destroying/creating a timer on each mouse move event, just use nextEventMatchingMask
+        CGError err = CGDisplayShowCursor(kCGDirectMainDisplay);
+        if (err) {
+            NSLog(@"Error showing cursor: %u", err);
         }
-        timer = [NSTimer scheduledTimerWithTimeInterval:timeout
-                            target:self selector:@selector(hideCursor)
-                            userInfo:nil repeats:NO];
-        [timer setTolerance:0.1]; // Save power
-        CGDisplayShowCursor(kCGDirectMainDisplay);
+        [statusItem setTitle: NSLocalizedString(@"Shown",@"")];
+        [self startTimer];
     }];
 }
 

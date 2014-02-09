@@ -8,8 +8,17 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>
+@interface AppDelegate : NSObject <NSApplicationDelegate> {
+    NSStatusItem * statusItem;
+    NSTimer *timer;
+    double timeout;
+}
 
-@property (assign) IBOutlet NSMenu *menu;
+@property (assign) IBOutlet NSWindow *window;
+@property (assign) IBOutlet NSMenu *statusMenu;
+
+- (void)hideCursor;
+- (void)propStringHack;
+- (void)startTimer;
 
 @end
