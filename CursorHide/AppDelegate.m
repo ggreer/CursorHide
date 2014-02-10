@@ -29,6 +29,13 @@
     //TODO cursorHideAutoStart, cursorHideHideOnScroll
 }
 
+- (void)observeValueForKeyPath:(NSString *)keyPath
+                      ofObject:(id)object
+                        change:(NSDictionary *)change
+                       context:(void *)context {
+    [self reloadSettings];
+}
+
 - (void)hideCursor {
     CGDisplayHideCursor(kCGDirectMainDisplay);
 }

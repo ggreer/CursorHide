@@ -16,8 +16,6 @@
                 <outlet property="menu" destination="ZrB-va-V2f" id="5bU-IK-H6c"/>
                 <outlet property="settingsWindow" destination="Bmu-bV-udF" id="reu-kW-1Ob"/>
                 <outlet property="state" destination="2qv-sy-HCv" id="j8T-yv-EWe"/>
-                <outlet property="timeoutLabel" destination="9ai-Eh-u3P" id="aqj-lK-P2b"/>
-                <outlet property="timeoutSlider" destination="WgY-t9-amZ" id="ZFl-rq-fS2"/>
             </connections>
         </customObject>
         <customObject id="420" customClass="NSFontManager"/>
@@ -62,7 +60,7 @@
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9ai-Eh-u3P">
-                        <rect key="frame" x="139" y="243" width="25" height="17"/>
+                        <rect key="frame" x="128" y="243" width="25" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="0.0" id="KgQ-dF-uNx">
                             <font key="font" metaFont="system"/>
@@ -74,9 +72,9 @@
                         </connections>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HxJ-xj-lkE">
-                        <rect key="frame" x="167" y="243" width="59" height="17"/>
+                        <rect key="frame" x="153" y="243" width="55" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title=" seconds" id="bef-9C-W2O">
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="seconds" id="bef-9C-W2O">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
