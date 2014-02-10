@@ -13,19 +13,108 @@
         <customObject id="-3" userLabel="Application"/>
         <customObject id="494" customClass="AppDelegate">
             <connections>
-                <outlet property="statusMenu" destination="ZrB-va-V2f" id="MKt-xS-S9C"/>
+                <outlet property="menu" destination="ZrB-va-V2f" id="5bU-IK-H6c"/>
+                <outlet property="settingsWindow" destination="Bmu-bV-udF" id="reu-kW-1Ob"/>
+                <outlet property="state" destination="2qv-sy-HCv" id="j8T-yv-EWe"/>
+                <outlet property="timeoutLabel" destination="9ai-Eh-u3P" id="aqj-lK-P2b"/>
+                <outlet property="timeoutSlider" destination="WgY-t9-amZ" id="ZFl-rq-fS2"/>
             </connections>
         </customObject>
         <customObject id="420" customClass="NSFontManager"/>
+        <window title="CursorHide Settings" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" appearanceType="aqua" animationBehavior="default" id="Bmu-bV-udF" customClass="NSPanel">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" utility="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="1972" y="1119" width="240" height="280"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1418"/>
+            <view key="contentView" id="EZu-tb-AgB">
+                <rect key="frame" x="0.0" y="0.0" width="240" height="280"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WgY-t9-amZ">
+                        <rect key="frame" x="20" y="218" width="200" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <sliderCell key="cell" controlSize="mini" continuous="YES" state="on" alignment="left" maxValue="6" doubleValue="2.6000000000000001" tickMarkPosition="below" numberOfTickMarks="31" allowsTickMarkValuesOnly="YES" sliderType="linear" id="9up-Yd-fy3"/>
+                        <connections>
+                            <binding destination="Hgk-14-Rbg" name="value" keyPath="values.cursorHideTimeout" id="JVF-27-wTd"/>
+                        </connections>
+                    </slider>
+                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FgE-Zb-LbO">
+                        <rect key="frame" x="18" y="114" width="178" height="18"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="check" title="Start CursorHide at login" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="kWE-7M-Bxn">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                            <connections>
+                                <binding destination="Hgk-14-Rbg" name="value" keyPath="values.autoStart" id="jsg-7C-wE5"/>
+                            </connections>
+                        </buttonCell>
+                        <connections>
+                            <binding destination="Hgk-14-Rbg" name="value" keyPath="values.cursorHideAutoStart" id="RMR-3z-NtV"/>
+                        </connections>
+                    </button>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4qP-mD-xeg">
+                        <rect key="frame" x="18" y="243" width="110" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Hide cursor after" id="VKM-iE-u27">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9ai-Eh-u3P">
+                        <rect key="frame" x="139" y="243" width="25" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="0.0" id="KgQ-dF-uNx">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                        <connections>
+                            <binding destination="Hgk-14-Rbg" name="value" keyPath="values.cursorHideTimeout" id="n5I-e1-sW8"/>
+                        </connections>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HxJ-xj-lkE">
+                        <rect key="frame" x="167" y="243" width="59" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title=" seconds" id="bef-9C-W2O">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <button appearanceType="aqua" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Sy-Lr-yVs">
+                        <rect key="frame" x="18" y="177" width="190" height="18"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="check" title="Hide immediately on scroll" bezelStyle="regularSquare" imagePosition="left" inset="2" id="KSF-RJ-hOj">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                            <connections>
+                                <binding destination="Hgk-14-Rbg" name="value" keyPath="values.cursorHideHideOnScroll" id="L33-cl-fpV"/>
+                            </connections>
+                        </buttonCell>
+                        <connections>
+                            <binding destination="Hgk-14-Rbg" name="value" keyPath="values.cursorHideHideOnScroll" id="8UH-h5-dwK"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+        </window>
         <menu id="ZrB-va-V2f">
             <items>
                 <menuItem title="Disable" id="2qv-sy-HCv">
                     <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="toggle:" target="494" id="sak-Jy-jxO"/>
+                    </connections>
                 </menuItem>
-                <menuItem title="Settings" id="V2i-8U-g2D">
+                <menuItem isSeparatorItem="YES" id="BiP-e6-bvt"/>
+                <menuItem title="Settings..." id="hsL-sm-jWh">
                     <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="makeKeyAndOrderFront:" target="Bmu-bV-udF" id="dHy-0O-8fi"/>
+                    </connections>
                 </menuItem>
-                <menuItem title="Quit" id="NZa-Zu-aBC">
+                <menuItem title="Quit CursorHide" id="NZa-Zu-aBC">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="quit:" target="494" id="x20-eS-rdU"/>
@@ -36,5 +125,6 @@
                 <outlet property="delegate" destination="494" id="Vps-rH-U11"/>
             </connections>
         </menu>
+        <userDefaultsController representsSharedInstance="YES" id="Hgk-14-Rbg"/>
     </objects>
 </document>

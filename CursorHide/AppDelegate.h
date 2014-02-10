@@ -9,19 +9,23 @@
 #import <Cocoa/Cocoa.h>
 
 @interface AppDelegate : NSObject <NSApplicationDelegate> {
-    NSStatusItem * statusItem;
+    NSStatusItem *statusItem;
     NSTimer *timer;
+    NSUserDefaults *defaults;
     double timeout;
+    bool enabled;
 }
 
-@property (assign) IBOutlet NSWindow *window;
-@property (assign) IBOutlet NSMenu *statusMenu;
+@property (assign) IBOutlet NSMenu *menu;
+@property (assign) IBOutlet NSMenuItem *state;
 
 - (void)propStringHack;
+- (void)reloadSettings;
 
 - (void)hideCursor;
 - (void)startTimer;
 
+- (IBAction)toggle:(id)sender;
 - (IBAction)quit:(id)sender;
 
 @end

@@ -17,40 +17,69 @@
     void CGSSetConnectionProperty(int, int, CFStringRef, CFBooleanRef);
     int _CGSDefaultConnection();
     CFStringRef propertyString;
+
     // Hack to make background cursor setting work
     propertyString = CFStringCreateWithCString(NULL, "SetsCursorInBackground", kCFStringEncodingUTF8);
     CGSSetConnectionProperty(_CGSDefaultConnection(), _CGSDefaultConnection(), propertyString, kCFBooleanTrue);
     CFRelease(propertyString);
 }
 
+- (void)reloadSettings {
+    timeout = [defaults doubleForKey: @"cursorHideTimeout"];
+    //TODO cursorHideAutoStart, cursorHideHideOnScroll
+}
+
 - (void)hideCursor {
-    // Hide the cursor and wait
     CGDisplayHideCursor(kCGDirectMainDisplay);
-    [statusItem setTitle: NSLocalizedString(@"H",@"")];
 }
 
 - (void)startTimer {
     [timer invalidate];
-    timer = [NSTimer scheduledTimerWithTimeInterval:timeout
-                                             target:self
-                                           selector:@selector(hideCursor)
-                                           userInfo:nil
-                                            repeats:NO];
-    [timer setTolerance:0.1]; // Save power
+    timer = [NSTimer scheduledTimerWithTimeInterval: timeout
+                                             target: self
+                                           selector: @selector(hideCursor)
+                                           userInfo: nil
+                                            repeats: NO];
+    [timer setTolerance: 0.1]; // Save power
+}
+
+- (IBAction)toggle:(id)sender {
+    enabled = !enabled;
+    if (enabled) {
+        [statusItem setImage: [NSImage imageNamed:@"cursor"]];
+        [_state setTitle: @"Disable"];
+    } else {
+        [statusItem setImage: [NSImage imageNamed:@"cursor_translucent"]];
+        [_state setTitle: @"Enable"];
+    }
+}
+
+- (IBAction)quit:(id)sender {
+    [defaults synchronize];
+    exit(0);
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     NSStatusBar *bar = [NSStatusBar systemStatusBar];
-    statusItem = [bar statusItemWithLength:NSVariableStatusItemLength];
-    [statusItem setTitle: NSLocalizedString(@"Cursor",@"")];
-    [statusItem setHighlightMode:YES];
-    [statusItem setMenu:_statusMenu];
+    statusItem = [bar statusItemWithLength: NSVariableStatusItemLength];
+    [statusItem setImage: [NSImage imageNamed:@"cursor"]];
+    [statusItem setHighlightMode: YES];
+    [statusItem setMenu: _menu];
 
-    // TODO: load/save timeout from user preference
-    timeout = 2.7;
-    [self startTimer];
+    defaults = [NSUserDefaults standardUserDefaults];
+    [defaults registerDefaults: @{ @"cursorHideTimeout": @2.6,
+                                   @"cursorHideAutoStart": @true,
+                                   @"cursorHideHideOnScroll": @false}];
+    [self reloadSettings];
+    [defaults addObserver: self
+               forKeyPath: @"cursorHideTimeout"
+                  options: NSKeyValueObservingOptionNew
+                  context: NULL];
+
+    enabled = true;
 
     [self propStringHack];
+    [self startTimer];
 
     NSUInteger resetTimerMask = NSMouseMovedMask | NSLeftMouseDownMask | NSRightMouseDownMask;
     // TODO: really really inefficient. maybe there's an event that doesn't fire every time the mouse moves a pixel
@@ -61,14 +90,8 @@
         if (err) {
             NSLog(@"Error showing cursor: %u", err);
         }
-        [statusItem setTitle: NSLocalizedString(@"S",@"")];
         [self startTimer];
     }];
-}
-
-- (IBAction)quit:(id)sender {
-    // TODO: save timeout
-    exit(0);
 }
 
 @end
