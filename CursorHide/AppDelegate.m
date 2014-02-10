@@ -13,20 +13,6 @@
 
 @implementation AppDelegate
 
-- (void)hideCursor {
-    // Hide the cursor and wait
-    CGDisplayHideCursor(kCGDirectMainDisplay);
-    [statusItem setTitle: NSLocalizedString(@"Hidden",@"")];
-}
-
-- (void)startTimer {
-    [timer invalidate];
-    timer = [NSTimer scheduledTimerWithTimeInterval:timeout
-                                             target:self selector:@selector(hideCursor)
-                                           userInfo:nil repeats:NO];
-    [timer setTolerance:0.1]; // Save power
-}
-
 - (void)propStringHack {
     void CGSSetConnectionProperty(int, int, CFStringRef, CFBooleanRef);
     int _CGSDefaultConnection();
@@ -35,6 +21,22 @@
     propertyString = CFStringCreateWithCString(NULL, "SetsCursorInBackground", kCFStringEncodingUTF8);
     CGSSetConnectionProperty(_CGSDefaultConnection(), _CGSDefaultConnection(), propertyString, kCFBooleanTrue);
     CFRelease(propertyString);
+}
+
+- (void)hideCursor {
+    // Hide the cursor and wait
+    CGDisplayHideCursor(kCGDirectMainDisplay);
+    [statusItem setTitle: NSLocalizedString(@"H",@"")];
+}
+
+- (void)startTimer {
+    [timer invalidate];
+    timer = [NSTimer scheduledTimerWithTimeInterval:timeout
+                                             target:self
+                                           selector:@selector(hideCursor)
+                                           userInfo:nil
+                                            repeats:NO];
+    [timer setTolerance:0.1]; // Save power
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
@@ -59,9 +61,14 @@
         if (err) {
             NSLog(@"Error showing cursor: %u", err);
         }
-        [statusItem setTitle: NSLocalizedString(@"Shown",@"")];
+        [statusItem setTitle: NSLocalizedString(@"S",@"")];
         [self startTimer];
     }];
+}
+
+- (IBAction)quit:(id)sender {
+    // TODO: save timeout
+    exit(0);
 }
 
 @end

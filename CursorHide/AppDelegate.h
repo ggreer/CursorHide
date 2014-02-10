@@ -17,8 +17,11 @@
 @property (assign) IBOutlet NSWindow *window;
 @property (assign) IBOutlet NSMenu *statusMenu;
 
-- (void)hideCursor;
 - (void)propStringHack;
+
+- (void)hideCursor;
 - (void)startTimer;
+
+- (IBAction)quit:(id)sender;
 
 @end
